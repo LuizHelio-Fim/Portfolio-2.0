@@ -1,31 +1,106 @@
+:root {
+    --bg-color: #22212c;
+    --text-color: #837e9f;
+    --bg-techs: #cb92b1;
+    --header-footer-color: #1c1b22;
+}
+
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header {
-    background-color: #f0f0f0;
+header, footer {
+    background-color: var(--header-footer-color);
     padding: 20px;
     text-align: center;
 }
 
+/* Estilos para nav, seções, projetos (como antes) */
+
+header {
+    position: fixed; /* Torna a navbar fixa */
+    top: 0; /* Posiciona no topo da página */
+    width: 100%; /* Ocupa toda a largura da página */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+}
+
+.main {
+    display: flex;
+    margin-top: 250px; /* Ajuste o valor conforme a altura do header */
+    flex-grow: 1;
+}
+
+.sobre, .skills {
+    flex: 1;
+    padding: 20px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social {
+    /* Estilos para ícones sociais */
+}
+
+.social a {
+    margin-right: 10px;
+}
+
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove as bolinhas (marcadores) */
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 10px;
 }
 
-section {
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--bg-techs); /* Define a cor do texto para a cor padrão */
+}
+
+.curriculo, .projetos {
+    text-align: center; /* Centraliza o botão */
     padding: 20px;
 }
 
-.projeto {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
+/* Estilo para o botão (opcional) */
+.curriculo a {
+    background-color: var(--bg-techs);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Estilos para telas menores (por exemplo, celulares) */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Empilha as seções verticalmente */
+    }
+
+    .sobre, .skills {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
 }
