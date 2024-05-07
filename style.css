@@ -42,6 +42,22 @@ header {
     padding: 20px;
 }
 
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills ul li {
+    list-style: none;
+    text-align: center;
+    background: var(--bg-techs);
+    color: white;
+    width: 80px;
+    margin: 3%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
 footer {
     display: flex;
@@ -50,8 +66,13 @@ footer {
     padding: 20px;
 }
 
-.social {
-    /* Estilos para ícones sociais */
+.social a {
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social a:hover {
+    transform: scale(1.1);
 }
 
 .social a {
@@ -78,6 +99,7 @@ nav ul li a {
 .curriculo, .projetos {
     text-align: center; /* Centraliza o botão */
     padding: 20px;
+    margin-bottom: 30px;
 }
 
 /* Estilo para o botão (opcional) */
@@ -93,6 +115,7 @@ nav ul li a {
 @media (max-width: 768px) {
     .main {
         flex-direction: column; /* Empilha as seções verticalmente */
+        margin-top: 350px;
     }
 
     .sobre, .skills {
