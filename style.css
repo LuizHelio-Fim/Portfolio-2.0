@@ -116,9 +116,56 @@ a:hover {
     transform: scale(1.1)
 }
 
+.home-hero {
+    background: linear-gradient(to right,
+    rgba(245, 245, 245, 0.8), 
+    rgba(245, 245, 245, 0.8),
+    url(./assets/background_home-hero.jpg));
+
+    background-position: center;
+    height: 100vh;
+    min-height: 80rem;
+    max-height: 120rem;
+    position: relative;
+}
+
+.home-hero_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90rem;
+    width: 92%;
+}
+
+.heading-primary {
+    margin: 0;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    color: var(--bg-techs);
+    font-weight: 800;
+}
+
+.home-hero_info {
+    margin: 30px auto 0 auto;
+    max-width: 80rem;
+}
+
+.text-primary {
+    color: var(--bg-techs);
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+}
+
+
+
 .main {
     display: flex;
-    margin-top: 100px; /* Ajuste o valor conforme a altura do header */
+    margin-top: 100px;
     flex-grow: 1;
 }
 
@@ -165,7 +212,7 @@ footer {
 }
 
 nav ul {
-    list-style: none; /* Remove as bolinhas (marcadores) */
+    list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -177,17 +224,16 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: var(--bg-techs); /* Define a cor do texto para a cor padrão */
+    text-decoration: none; 
+    color: var(--bg-techs); 
 }
 
 .curriculo, .projetos {
-    text-align: center; /* Centraliza o botão */
+    text-align: center; 
     padding: 20px;
     margin-bottom: 30px;
 }
 
-/* Estilo para o botão (opcional) */
 .curriculo a {
     background-color: var(--bg-techs);
     color: white;
@@ -198,12 +244,12 @@ nav ul li a {
 
 @media (max-width: 768px) {
     .main {
-        flex-direction: column; /* Empilha as seções verticalmente */
+        flex-direction: column; 
         margin-top: 100px;
     }
 
     .sobre, .skills {
-        width: 100%; /* Ocupa toda a largura disponível */
+        width: 100%; 
     }
 
     nav ul li {
