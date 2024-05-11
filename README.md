@@ -39,10 +39,3 @@ Acesse a demonstração online do meu portfólio: [Luiz Hélio Fim Filho - Portf
 
 Em caso de dúvidas ou sugestões, entre em contato comigo: [luizhelio.fim@outlook.com](mailto:luizhelio.fim@outlook.com)
 
-## Observações
-
-- Substitua os links de demonstração e contato com seus próprios links.
-- Adicione mais detalhes sobre seus projetos, habilidades e experiência neste README.
-- Use este modelo como ponto de partida e personalize-o de acordo com suas necessidades.
-
-Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato!
