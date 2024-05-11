@@ -33,7 +33,7 @@ Você pode personalizar o portfólio facilmente modificando os seguintes arquivo
 
 ## Demonstração
 
-Acesse a demonstração online do meu portfólio: [Luiz Hélio Fim Filho - Portfólio](https://luizhelio-fim.github.io/Curriculo/)
+Acesse a demonstração online do meu portfólio: [Luiz Hélio Fim Filho - Portfólio](https://luizhelio-fim.github.io/Portfolio-2.0/)
 
 ## Contato
 
