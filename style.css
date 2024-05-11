@@ -3,6 +3,7 @@
     --text-color: #837e9f;
     --bg-techs: #cb92b1;
     --header-footer-color: #1c1b22;
+    --title-color: #8269ae;
 }
 
 head {
@@ -233,13 +234,38 @@ a:hover {
 
 .main {
     display: flex;
-    margin-top: 100px;
+    margin: -400px auto auto auto;
     flex-grow: 1;
+    max-width: 120rem;
+    width: 92%;
+}
+
+.sec-pad {
+    padding: 12rem 0;
+}
+
+.heading-sec_mb-med {
+    margin-bottom: 9rem;
+}
+
+.heading-sec_main {
+    display: block;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    color: var(--bg-techs);
 }
 
 .sobre, .skills {
     flex: 1;
     padding: 20px;
+}
+
+.sobre h2, .skills h2, .projetos h2, .curriculo h2, .social h2 {
+    color: var(--title-color);
 }
 
 .skills ul {
@@ -308,6 +334,15 @@ nav ul li a {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    transition: transform .2s ease-in-out;
+}
+
+.CV {
+    transition: transform .2s ease-in-out;
+}
+
+.CV:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
