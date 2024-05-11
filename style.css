@@ -5,6 +5,13 @@
     --header-footer-color: #1c1b22;
 }
 
+head {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -15,6 +22,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
 }
 
@@ -125,19 +133,24 @@ a:hover {
 }
 
 .home-hero {
-    background: url(./assets/background_home-hero.jpg);
     background: linear-gradient(to right, rgba(34, 33, 44, 0.5), rgba(34, 33, 44, 0.5),
     url(./assets/background_home-hero.jpg));
     background-position: center;
-    height: 100vh;
     min-height: 80rem;
     max-height: 120rem;
     position: relative;
 }
 
+.bg-height {
+    height: 100vh;
+    width: 190vh;
+    position: relative;
+    background-position: center;
+}
+
 .home-hero_content {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 1140px;
@@ -165,6 +178,57 @@ a:hover {
     text-align: center;
     width: 100%;
     line-height: 1.6;
+}
+
+.home-hero_cta {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.btn--bg {
+    padding: 15px 80px;
+    font-size: 20px;
+}
+
+.home-hero_cta a {
+    text-decoration: none;
+}
+
+.btn {
+    background: var(--bg-techs);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+    transition: transform .3s;
+}
+
+.home-hero_socials {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background: var(--bg-color);
+    box-shadow: rgba(77, 77, 87, 0.2) 0px 7px 29px 0px;
+    padding: .08rem;
+}
+
+.home-hero_social {
+    width: 4rem;
+}
+
+.home-hero_social a{
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-hero_social-icon {
+    width: 100%;
 }
 
 .main {
@@ -247,6 +311,24 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+
+    .home-hero {
+        height: unset;
+        min-height: unset;
+    }
+
+    .home-hero_content {
+        background-position: center;
+        padding: 19rem 0 1rem 0;
+        margin: -850px auto auto auto;
+        position: static;
+        transform: translate(0, 0);
+    }
+
+    .home-hero_socials {
+        display: none;
+    }
+
     .main {
         flex-direction: column; 
         margin-top: 100px;
