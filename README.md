@@ -20,7 +20,7 @@ Bem-vindo ao repositório do meu portfólio pessoal! Aqui você encontrará o c�
 
 Para visualizar o portfólio localmente, siga estas etapas:
 
-1. Clone este repositório: `git clone https://github.com/LuizHelio-Fim/portfolio.git`
+1. Clone este repositório: `git clone https://github.com/LuizHelio-Fim/portfolio-2.0.git`
 2. Abra o arquivo `index.html` em seu navegador web.
 
 ## Personalização
