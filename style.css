@@ -138,7 +138,7 @@ a:hover {
     url(./assets/background_home-hero.jpg));
     background-position: center;
     min-height: 80rem;
-    max-height: 120rem;
+    max-height: 1200px;
     position: relative;
 }
 
@@ -234,7 +234,7 @@ a:hover {
 
 .main {
     display: flex;
-    margin: -400px auto auto auto;
+    margin: -260px auto auto auto;
     flex-grow: 1;
     max-width: 120rem;
     width: 92%;
@@ -347,6 +347,10 @@ nav ul li a {
 
 @media (max-width: 768px) {
 
+    header {
+        width: 60vh;
+    }
+
     .home-hero {
         height: unset;
         min-height: unset;
@@ -374,10 +378,21 @@ nav ul li a {
     .main {
         flex-direction: column; 
         margin-top: 100px;
+        text-align: center;
     }
 
     .sobre, .skills {
         width: 100%; 
+    }
+
+    .projetos, .curriculo {
+        padding-left: 150px;
+    }
+
+    .sobre.sec-pad, .skills div {
+        padding-left: 70px;
+        align-items: center;
+        text-align: center;
     }
 
     nav ul li {
@@ -415,12 +430,15 @@ nav ul li a {
     
     .nav-list li {
         margin-left: 0;
-        opacity: 0;
+        /* opacity: 0; */
     }
 
     .mobile-menu {
         display: block;
     }
 
+    footer {
+       width: 56vh;
+    }
     
 }
