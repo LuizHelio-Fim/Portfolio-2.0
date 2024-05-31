@@ -420,7 +420,7 @@ nav ul li a {
 @media (max-width: 768px) {
 
     header {
-        width: 60vh;
+        width: 100vw;
     }
 
     .home-hero {
@@ -438,7 +438,7 @@ nav ul li a {
 
     .bg-height {
         height: 100vh;
-        width: 60vh;
+        width: 100vw;
         position: relative;
         background-position: center;
     }
@@ -453,12 +453,37 @@ nav ul li a {
         text-align: center;
     }
 
+    .projetos_row_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .projetos_row-content-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .projetos_row-content-desc {
+         font-size: 18px;
+         text-align: center;
+          max-width: 90%;
+     }
+    
+     .btn--med {
+          padding: 10px 2rem;
+          font-size: 14px;
+     }
+    
+    .social a {
+        margin: 10px;
+    }
+    
     .sobre, .skills {
-        width: 100%; 
+        width: 100vw; 
     }
 
     .projetos, .curriculo {
-        padding-left: 150px;
+        padding-left: 10px;
     }
 
     .sobre.sec-pad, .skills div {
@@ -468,14 +493,13 @@ nav ul li a {
     }
 
     nav ul li {
-        width: 100%;
+        width: 100vw;
         text-align: center;
     }
 
     .header_content {
         max-height: 1000px;
-        width: 50vh;
-        padding-left: 21px;
+        width: 100vw;
     }
 
     .sec-pad {
@@ -510,7 +534,9 @@ nav ul li a {
     }
 
     footer {
-       width: 56vh;
+        flex-direction: column;
+        width: 56vh;
+        align-items: center;
     }
     
 }
