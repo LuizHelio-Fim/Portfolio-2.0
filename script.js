@@ -12,16 +12,18 @@ const currentLangSpan = document.getElementById("current-lang")
 // Navigation functionality
 let isMenuOpen = false
 
-navToggle.addEventListener("click", () => {
-  isMenuOpen = !isMenuOpen
-  navMenu.classList.toggle("active")
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    isMenuOpen = !isMenuOpen
+    navMenu.classList.toggle("active")
 
-  if (isMenuOpen) {
-    navIcon.className = "fas fa-times"
-  } else {
-    navIcon.className = "fas fa-bars"
-  }
-})
+    if (isMenuOpen) {
+      navIcon.className = "fas fa-times"
+    } else {
+      navIcon.className = "fas fa-bars"
+    }
+  })
+}
 
 // Close mobile menu when clicking on nav links
 document.querySelectorAll(".nav-link").forEach((link) => {
@@ -51,19 +53,26 @@ const savedTheme = localStorage.getItem("theme")
 if (savedTheme) {
   isDark = savedTheme === "dark"
   document.documentElement.setAttribute("data-theme", savedTheme)
-  updateThemeIcon()
+  // Only update theme icon if element exists
+  if (themeIcon) {
+    updateThemeIcon()
+  }
 }
 
-themeToggle.addEventListener("click", () => {
-  isDark = !isDark
-  const theme = isDark ? "dark" : "light"
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    isDark = !isDark
+    const theme = isDark ? "dark" : "light"
 
-  document.documentElement.setAttribute("data-theme", theme)
-  localStorage.setItem("theme", theme)
-  updateThemeIcon()
-})
+    document.documentElement.setAttribute("data-theme", theme)
+    localStorage.setItem("theme", theme)
+    updateThemeIcon()
+  })
+}
 
 function updateThemeIcon() {
+  if (!themeIcon) return; // Guard clause se o elemento não existir
+  
   if (isDark) {
     themeIcon.className = "fas fa-sun"
   } else {
@@ -86,31 +95,33 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 })
 
 // Contact form handling
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault()
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-  const formData = new FormData(contactForm)
-  const name = formData.get("name")
-  const email = formData.get("email")
-  const message = formData.get("message")
+    const formData = new FormData(contactForm)
+    const name = formData.get("name")
+    const email = formData.get("email")
+    const message = formData.get("message")
 
-  // Simple form validation
-  if (!name || !email || !message) {
-    alert("Por favor, preencha todos os campos.")
-    return
-  }
+    // Simple form validation
+    if (!name || !email || !message) {
+      alert("Por favor, preencha todos os campos.")
+      return
+    }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegex.test(email)) {
-    alert("Por favor, insira um email válido.")
-    return
-  }
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      alert("Por favor, insira um email válido.")
+      return
+    }
 
-  // Simulate form submission
-  alert("Mensagem enviada com sucesso! Entrarei em contato em breve.")
-  contactForm.reset()
-})
+    // Simulate form submission
+    alert("Mensagem enviada com sucesso! Entrarei em contato em breve.")
+    contactForm.reset()
+  })
+}
 
 // Intersection Observer for animations
 const observerOptions = {
@@ -362,20 +373,30 @@ function translatePage(language) {
   })
 
   // Update language indicator
-  currentLangSpan.textContent = language.toUpperCase()
+  if (currentLangSpan) {
+    currentLangSpan.textContent = language.toUpperCase()
+  }
 
   // Update lang attribute of HTML
   document.documentElement.lang = language === "pt" ? "pt-BR" : "en"
 }
 
 // Event listener for language toggle button
-languageToggle.addEventListener("click", () => {
-  currentLanguage = currentLanguage === "pt" ? "en" : "pt"
-  translatePage(currentLanguage)
-  localStorage.setItem("language", currentLanguage)
-})
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    currentLanguage = currentLanguage === "pt" ? "en" : "pt"
+    translatePage(currentLanguage)
+    localStorage.setItem("language", currentLanguage)
+  })
+}
 
-// Initialize saved language
+// Initialize saved language and theme when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize language
   translatePage(currentLanguage)
+  
+  // Initialize theme icon if element exists
+  if (themeIcon) {
+    updateThemeIcon()
+  }
 })
