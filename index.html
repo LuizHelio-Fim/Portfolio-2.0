@@ -1,187 +1,318 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz Hélio - Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Luiz Hélio - Estagiário e aspirante a Cientista de Dados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <div class="header_content">
-            <div class="header_span-content">
-                    <span class="header-sub">Luiz Hélio Fim Filho</span>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <span class="gradient-text">Luiz Hélio</span>
             </div>
-            <nav>
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="./#sobre">Sobre</a></li>
-                    <li><a href="./#projetos">Projetos</a></li>
-                    <li><a href="./#curriculo">Currículo</a></li>
-                    <li><a href="./#social">Social</a></li>
+                    <li><a href="#home" class="nav-link" data-pt="Início" data-en="Home">Início</a></li>
+                    <li><a href="#about" class="nav-link" data-pt="Sobre" data-en="About">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+                    <li><a href="#contact" class="nav-link" data-pt="Contato" data-en="Contact">Contato</a></li>
                 </ul>
-            </nav>
-        </div>
-        
+            </div>
+
+            <div class="nav-actions">
+                <!-- Adicionado botão de idioma -->
+                <button id="language-toggle" class="language-toggle" aria-label="Alterar idioma">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">PT</span>
+                </button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button id="nav-toggle" class="nav-toggle" aria-label="Menu">
+                    <i class="fas fa-bars" id="nav-icon"></i>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <section class="home-hero">
-        <img src="./assets/background_home-hero.jpg" alt="backgroud" class="bg-height">
-        <div class="home-hero_content">
-            <h1 class="heading-primary">Oi, Eu sou o Luiz</h1>
-            <div class="home-hero_info">
-                <p class="text-primary">
-                    Um estudante de Analise e Desenvolvimento de Sistemas que se interessa
-                    por IA, Computação Quântica e JAVA 
-                </p>
-            </div>
-            <div class="home-hero_cta">
-                <a href="./#projetos" class="btn btn--bg">Projetos</a>
-            </div>
-        </div>
-        <div class="home-hero_socials">
-            <div class="home-hero_social">
-                <a href="https://br.linkedin.com/in/luiz-h%C3%A9lio-fim-filho-24453528b" target="_blank">
-                    <img src="./assets/linkedin.svg" alt="linkedin icon" class="home-hero_social-icon">
-                </a>
-            </div>
-            <div class="home-hero_social">
-                <a href="https://github.com/LuizHelio-Fim" target="_blank">
-                    <img src="./assets/github.svg" alt="githuh icon" class="home-hero_social-icon">
-                </a>
-            </div>
-            <div class="home-hero_social">
-                <a href="https://www.instagram.com/luizfim027/" target="_blank">
-                    <img src="./assets/instagram.svg" alt="IG icon" class="home-hero_social-icon">
-                </a>
-            </div>
-            <div class="home-hero_social">
-                <a href="https://twitter.com/DevLuizHelio" target="_blank">
-                    <img src="./assets/twitter.svg" alt="twitter icon" class="home-hero_social-icon">
-                </a>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
         </div>
         
-    </section>
-
-    <main class="main">
-        <section id="sobre" class="sobre sec-pad">
-            <h2>Sobre Mim</h2>
-            <p>Estudo desenvolvimento de software desde pequeno, mas foi em 2023 que iniciei 
-                estudos mais rigorosos.</p> <p>Desde o início, apresentei muito interesse e desenvoltura 
-                na aprendizagem de novas tecnologias.</p> <p>Estou no processo de graduação em Analise e 
-                Desenvolvimento de Sistemas, trabalho com contábilidade e vendo projetos como 
-                freelancer.</p>
-        </section>
-
-        <section class="skills">
-            <div>
-                <h2>Skills</h2>
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>SQL</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <section id="projetos" class="projetos sec-pad">
-        <div class="main-container">
-            <h2>Projetos</h2>
-            <span class="heading-sec_sub">
-                Aqui você ira encontrar alguns dos meus projetos pessoais!
-            </span>
-            <div class="projetos_content">
-                <div class="projetos_row"></div>
-                <div class="projetos_row">
-                    <div class="projetos_row_img_cont">
-                        <img src="./assets/projetos/monitor_com_calculadora.svg" alt="calculadora" class="projetos_row-img" loading="lazy">
-                    </div>
-                    <div class="projetos_row_content">
-                        <h3 class="projetos_row-content-title">Calculadora</h3>
-                        <p class="projetos_row-content-desc">
-                            Uma calculadora interativa, open source e desenvolvida com HTML, CSS e JavaScript
-                            . Permite realizar operações básicas e avançadas de forma rápida 
-                            e intuitiva.
-                        </p>
-                        <a class="btn btn--med btn--theme dynamicBgClr" 
-                        href="https://luizhelio-fim.github.io/Calculadora/" target="_blank">Veja Aqui</a>
-                    </div>
-                </div>
-                <div class="projetos_row">
-                    <div class="projetos_row_img_cont">
-                        <img src="./assets/projetos/Monitor_com_linktree.svg" alt="linktree" class="projetos_row-img" loading="lazy">
-                    </div>
-                    <div class="projetos_row_content">
-                        <h3 class="projetos_row-content-title">Linktree</h3>
-                        <p class="projetos_row-content-desc">
-                            Um guardador de links interativo, open source e desenvolvida com HTML, CSS e JavaScript
-                            . Guarda quantos links quiser incluindo redes sociais. Projeto feito com apoio
-                            do curso Discover - RocketSeat.
-                        </p>
-                        <a class="btn btn--med btn--theme dynamicBgClr" 
-                        href="https://luizhelio-fim.github.io/LinkTree/" target="_blank">Veja Aqui</a>
-                    </div>
-                </div>
-                <div class="projetos_row">
-                    <div class="projetos_row_img_cont">
-                        <img src="./assets/projetos/Monitor_com_quiz.svg" alt="quiz" class="projetos_row-img" loading="lazy">
-                    </div>
-                    <div class="projetos_row_content">
-                        <h3 class="projetos_row-content-title">Quiz</h3>
-                        <p class="projetos_row-content-desc">
-                            Um quiz de jogos dinâmico criado com HTML, CSS e JavaScript. 
-                            Utiliza uma abordagem modular e interativa para oferecer perguntas sobre vários aspectos dos jogos. 
-                            A aplicação emprega manipulação DOM e lógica de programação em JavaScript para criar uma experiência 
-                            de quiz envolvente e responsiva. Criado durante o NLW - Expert.
-                        </p>
-                        <a class="btn btn--med btn--theme dynamicBgClr" 
-                        href="https://luizhelio-fim.github.io/Quiz/" target="_blank">Veja Aqui</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="curriculo" class="curriculo">
-        <h2>Currículo</h2>
-        <div class="CV">
-            <a href="https://drive.google.com/file/d/1erDXjrXlMYtd4Syelnt0vIZ5Q3xNh8TE/view?usp=sharing" target="_blank">Baixar CV</a>
-        </div>
-    </section>
-
-    <footer>
-        <div>
-            <h3>Luiz Hélio</h3>
-            <p>Estudante de ADS</p>
-        </div>
-        <div id="social" class="social">
-            <h2>Social</h2>
-            <a target="_blank" href="https://github.com/LuizHelio-Fim">
-                <img src="./assets/github.svg" alt="github icon">
-            </a>
-            <a target="_blank" href="https://br.linkedin.com/in/luiz-h%C3%A9lio-fim-filho-24453528b">
-                <img src="./assets/linkedin.svg" alt="linkedin icon">
-            </a>
-            <a href="https://www.instagram.com/luizfim027/" target="_blank">
-                <img src="./assets/instagram.svg" alt="IG logo">
-            </a>
-            <a target="_blank" href="https://twitter.com/DevLuizHelio">
-                <img src="./assets/twitter.svg" alt="twitter icon">
-            </a>
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span data-pt="Olá, eu sou" data-en="Hello, I'm">Olá, eu sou</span> <span class="gradient-text">Luiz Hélio</span>
+            </h1>
+            <p class="hero-description" data-pt="Estagiário Full-Stack e aspirante a Cientista de Dados, com experiência em Java SpringBoot, Python e desenvolvimento de soluções inovadoras." data-en="Full-Stack Intern and aspiring Data Scientist, with experience in Java SpringBoot, Python and developing innovative solutions.">
+                Estagiário Full-Stack e aspirante a Cientista de Dados, 
+                com experiência em Java SpringBoot, Python e desenvolvimento de soluções inovadoras.
+            </p>
             
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" data-pt="Ver Projetos" data-en="View Projects">Ver Projetos</a>
+                <a href="#" class="btn btn-outline" data-pt="Download CV" data-en="Download CV">Download CV</a>
             </div>
-        <p>© 2024 Luiz Hélio</p>
+            
+            <div class="hero-social">
+                <!-- Corrigidos links conforme arquivo original -->
+                <a href="https://github.com/LuizHelio-Fim" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/luizheliofimfilho" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:luizhelio.fim@outlook.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-pt="Sou um estudante de Análise e Desenvolvimento de Sistemas, atualmente no quarto período, com experiência em várias tecnologias. Estou sempre ansioso para aprender mais e enfrentar novos desafios." data-en="I am a Systems Analysis and Development student, currently in the fourth semester, with experience in various technologies. I am always eager to learn more and face new challenges.">
+                        Sou um estudante de Análise e Desenvolvimento de Sistemas, 
+                        atualmente no quarto período, com experiência em várias tecnologias. 
+                        Estou sempre ansioso para aprender mais e enfrentar novos desafios.
+                    </p>
+                    <p data-pt="Trabalho com tecnologias modernas e tenho experiência em desenvolvimento web, análise de dados e automação de processos." data-en="I work with modern technologies and have experience in web development, data analysis and process automation.">
+                        Trabalho com tecnologias modernas e tenho experiência em
+                        desenvolvimento web, análise de dados e automação de processos.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label" data-pt="Projetos Concluídos" data-en="Completed Projects">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label" data-pt="Anos de Experiência" data-en="Years of Experience">Anos de Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-pt="Tecnologias" data-en="Technologies">Tecnologias</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <!-- Usando foto do LinkedIn conforme solicitado -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFXAiLpJVAAlw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708122877335?e=2147483647&v=beta&t=4bicYP5ktTaNabqcjYHD6nKP3RXgt5ey1-BTQAfUsJs" 
+                        alt="Foto de perfil do Luiz">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
+            
+            <!-- Seção de habilidades conforme a imagem fornecida -->
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 data-pt="Data Science & IA" data-en="Data Science & AI">Data Science & IA</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-pt="Desenvolvimento Web" data-en="Web Development">Desenvolvimento Web</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SpringBoot</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 data-pt="Ferramentas & Banco de Dados" data-en="Tools & Database">Ferramentas & Banco de Dados</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLServer</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title" data-pt="Projetos" data-en="Projects">Projetos</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Sistema de gerenciamento de clinica psicologica">
+                    </div>
+                    <div class="project-content">
+                        <h3>QuickHelp</h3>
+                        <p data-pt="Sistema Desktop para gerenciamento de atendimentos de uma clinica Psicologica" data-en="Desktop System for managing appointments at a Psychology clinic">Sistema Desktop para gerenciamento de atendimentos de uma clinica Psicologica</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Swing</span>
+                            <span>Arquitetura MVC</span>
+                            <span>Collections e Streams API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LuizHelio-Fim/QuickHelp" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/LuizHelio-Fim/QuickHelp" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Sudoku em Java">
+                    </div>
+                    <div class="project-content">
+                        <h3>SUDOKU</h3>
+                        <p data-pt="Jogo de Sudoku desenvolvido em Java com interface gráfica interativa." data-en="Sudoku game developed in Java with interactive graphical interface.">Jogo de Sudoku desenvolvido em Java com interface gráfica interativa.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Swing</span>
+                            <span>Arquitetura MVC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LuizHelio-Fim/SUDOKU-JAVA" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/LuizHelio-Fim/SUDOKU-JAVA" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=200&width=300" alt="Portfólio Pessoal">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-pt="Portfólio Pessoal" data-en="Personal Portfolio">Portfólio Pessoal</h3>
+                        <p data-pt="Site pessoal desenvolvido com tecnologias modernas para apresentar projetos e habilidades." data-en="Personal website developed with modern technologies to showcase projects and skills.">Site pessoal desenvolvido com tecnologias modernas para apresentar projetos e habilidades.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>Typescript</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/LuizHelio-Fim/Portfolio-2.0" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://luizhelio-fim.github.io/Portfolio-2.0" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-pt="Contato" data-en="Contact">Contato</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-pt="Vamos conversar!" data-en="Let's talk!">Vamos conversar!</h3>
+                    <p data-pt="Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato!" data-en="I'm always open to new opportunities and interesting projects. Get in touch!">Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato!</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>luizhelio.fim@outlook.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+55 (27) 99693-6153</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-pt="Vitória, ES - Brasil" data-en="Vitória, ES - Brazil">Vitória, ES - Brasil</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" data-pt-placeholder="Seu nome" data-en-placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu email" data-pt-placeholder="Seu email" data-en-placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Sua mensagem" data-pt-placeholder="Sua mensagem" data-en-placeholder="Your message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p data-pt="&copy; 2025 Luiz Hélio. Todos os direitos reservados." data-en="&copy; 2025 Luiz Hélio. All rights reserved.">&copy; 2025 Luiz Hélio. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <!-- Corrigidos links do footer -->
+                    <a href="https://github.com/LuizHelio-Fim" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/luizheliofimfilho" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:luizhelio.fim@outlook.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
