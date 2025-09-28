@@ -164,7 +164,7 @@ window.addEventListener("load", () => {
   if (heroTitle) {
     const originalText = heroTitle.innerHTML
     // Uncomment the line below to enable typing effect
-    // typeWriter(heroTitle, originalText, 50);
+    //typeWriter(heroTitle, originalText, 50);                ERRO
   }
 })
 
