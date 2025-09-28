@@ -1,41 +1,65 @@
-# Portfólio Pessoal - Luiz Hélio Fim Filho
+# Portfólio Pessoal – Luiz Hélio Fim Filho
 
-Bem-vindo ao repositório do meu portfólio pessoal! Aqui você encontrará o código-fonte do meu site, desenvolvido com HTML, CSS e JavaScript. Meu portfólio apresenta minhas habilidades, projetos e informações de contato.
+[![Website](https://img.shields.io/badge/Website-online-brightgreen.svg)](https://luizhelio-fim.github.io/Portfolio-2.0/)  
+[![Email](https://img.shields.io/badge/Email-luizhelio.fim@outlook.com-blue.svg)](mailto:luizhelio.fim@outlook.com)
 
-## Funcionalidades
+## 👋 Sobre mim
 
-- **Navegação fixa:** O cabeçalho permanece fixo no topo da página para fácil acesso à navegação.
-- **Menu responsivo:** A navegação se adapta a diferentes tamanhos de tela, proporcionando uma boa experiência em dispositivos móveis.
-- **Animações:** Inclui animações sutis ao passar o mouse sobre os links, tornando a interface mais interativa.
-- **Seções organizadas:** As informações são apresentadas em seções claras e concisas: Sobre Mim, Skills, Projetos e Currículo.
-- **Links sociais:** Facilita a conexão com meus perfis sociais.
+Olá! Eu sou **Luiz Hélio**, estudante de Análise e Desenvolvimento de Sistemas na FAESA, atualmente no **4º período**.  
+Tenho paixão por desenvolvimento web, ciência de dados e tudo que envolve usar tecnologia para resolver problemas reais.
 
-## Tecnologias Utilizadas
+- Gosto de aprender novas linguagens e ferramentas constantemente.  
+- Estou me aprofundando em **Java**, **Spring Boot**, **Python** e **Data Science / IA**.  
+- Me considero um dev curioso e que busca qualidade no código e usabilidade nas interfaces.
 
-- HTML
-- CSS
-- JavaScript
+---
 
-## Instalação
+## 🏗️ Sobre este portfólio
 
-Para visualizar o portfólio localmente, siga estas etapas:
+Este repositório contém o código-fonte do meu site pessoal — um portfólio moderno, leve e responsivo.  
+Aqui você verá minhas habilidades, projetos desenvolvidos, trajetória e informações para entrar em contato.
 
-1. Clone este repositório: `git clone https://github.com/LuizHelio-Fim/portfolio-2.0.git`
-2. Abra o arquivo `index.html` em seu navegador web.
+### Principais funcionalidades
 
-## Personalização
+- Navegação fixa e responsiva  
+- Menu mobile adaptado  
+- Seções bem organizadas: Sobre, Habilidades, Projetos, Contato  
+- Animações sutis para melhorar a experiência  
+- Links para redes sociais e para acessar meu currículo  
+- Formulário de contato integrado (com validações)  
 
-Você pode personalizar o portfólio facilmente modificando os seguintes arquivos:
+### Tecnologias usadas
 
-- **index.html:** Atualize as informações pessoais, a descrição dos projetos e os links sociais.
-- **style.css:** Personalize o estilo visual do portfólio, como cores, fontes e espaçamentos.
-- **script.js:** Adicione ou modifique funcionalidades JavaScript, como animações ou interações.
+- HTML  
+- CSS (stylings modernos)  
+- JavaScript (ES6+)  
+- Integração com EmailJS para envio de emails
 
-## Demonstração
+---
 
-Acesse a demonstração online do meu portfólio: [Luiz Hélio Fim Filho - Portfólio](https://luizhelio-fim.github.io/Portfolio-2.0/)
+## 💼 Projetos em destaque
 
-## Contato
+Aqui alguns projetos que já desenvolvi — muitos com código público no meu GitHub:
 
-Em caso de dúvidas ou sugestões, entre em contato comigo: [luizhelio.fim@outlook.com](mailto:luizhelio.fim@outlook.com)
+| Projeto | Descrição | Principais tecnologias |
+|---|---|---|
+| **QuickHelp** | Sistema desktop para gerenciamento de atendimentos psicológicos | Java, Swing, MVC |
+| **SUDOKU-JAVA** | Jogo de Sudoku com interface gráfica interativa | Java, POO |
+| **Portfolio-2.0** | Meu site pessoal para apresentar meus projetos e perfil | HTML, CSS, JS |
 
+Você pode explorar todos os meus repositórios no meu perfil do GitHub.  
+
+---
+
+## 📂 Como executar localmente
+
+1. Faça um clone deste repositório  
+   ```bash
+   git clone https://github.com/LuizHelio-Fim/Portfolio-2.0.git
+2. Entre na pasta do Projeto
+   ```bash
+   cd Portfolio-2.0
+3. Abra o arquivo index.html em seu navegador
+   ```bash
+   open index.html
+   
