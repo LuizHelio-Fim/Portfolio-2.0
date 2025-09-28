@@ -9,6 +9,9 @@ const contactForm = document.getElementById("contact-form")
 const languageToggle = document.getElementById("language-toggle")
 const currentLangSpan = document.getElementById("current-lang")
 
+// EmailJS library
+let emailjs
+
 // Navigation functionality
 let isMenuOpen = false
 
@@ -71,8 +74,8 @@ if (themeToggle) {
 }
 
 function updateThemeIcon() {
-  if (!themeIcon) return; // Guard clause se o elemento não existir
-  
+  if (!themeIcon) return // Guard clause se o elemento não existir
+
   if (isDark) {
     themeIcon.className = "fas fa-sun"
   } else {
@@ -94,9 +97,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   })
 })
 
-// Contact form handling
+// Language toggle functionality
+let currentLanguage = localStorage.getItem("language") || "pt"
+
+// Contact form handling with EmailJS
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault()
 
     const formData = new FormData(contactForm)
@@ -106,20 +112,48 @@ if (contactForm) {
 
     // Simple form validation
     if (!name || !email || !message) {
-      alert("Por favor, preencha todos os campos.")
+      const errorMsg = currentLanguage === "pt" ? "Por favor, preencha todos os campos." : "Please fill in all fields."
+      alert(errorMsg)
       return
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      alert("Por favor, insira um email válido.")
+      const errorMsg = currentLanguage === "pt" ? "Por favor, insira um email válido." : "Please enter a valid email."
+      alert(errorMsg)
       return
     }
 
-    // Simulate form submission
-    alert("Mensagem enviada com sucesso! Entrarei em contato em breve.")
-    contactForm.reset()
+    if (emailjs) {
+      // Send email using EmailJS
+      emailjs.sendForm("service_05q28kc", "template_lopjfvh", this).then(
+        () => {
+          const successMsg =
+            currentLanguage === "pt"
+              ? "Mensagem enviada com sucesso! Entrarei em contato em breve."
+              : "Message sent successfully! I'll get in touch soon."
+          alert(successMsg)
+          contactForm.reset()
+        },
+        (error) => {
+          console.error("EmailJS Error:", error)
+          const errorMsg =
+            currentLanguage === "pt"
+              ? "Ops, ocorreu um erro. Tente novamente!"
+              : "Oops, an error occurred. Please try again!"
+          alert(errorMsg)
+        },
+      )
+    } else {
+      // Fallback se EmailJS não estiver disponível
+      const successMsg =
+        currentLanguage === "pt"
+          ? "Mensagem enviada com sucesso! Entrarei em contato em breve."
+          : "Message sent successfully! I'll get in touch soon."
+      alert(successMsg)
+      contactForm.reset()
+    }
   })
 }
 
@@ -164,7 +198,7 @@ window.addEventListener("load", () => {
   if (heroTitle) {
     const originalText = heroTitle.innerHTML
     // Uncomment the line below to enable typing effect
-    //typeWriter(heroTitle, originalText, 50);                ERRO
+    //typeWriter(heroTitle, originalText, 50);
   }
 })
 
@@ -221,9 +255,6 @@ window.addEventListener("load", () => {
     document.body.style.opacity = "1"
   }, 100)
 })
-
-// Language toggle functionality
-let currentLanguage = localStorage.getItem("language") || "pt"
 
 // Translations
 const translations = {
@@ -390,13 +421,32 @@ if (languageToggle) {
   })
 }
 
+// Initialize EmailJS when the library is loaded
+function initializeEmailJS() {
+  if (typeof window.emailjs !== "undefined") {
+    emailjs = window.emailjs
+    emailjs.init("ta9oM4y2NjsiIC2UK") // PUBLIC KEY
+    console.log("EmailJS initialized successfully")
+  } else {
+    console.log("EmailJS library not loaded, form will work with fallback")
+  }
+}
+
 // Initialize saved language and theme when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize language
   translatePage(currentLanguage)
-  
+
   // Initialize theme icon if element exists
   if (themeIcon) {
     updateThemeIcon()
   }
+
+  // Initialize EmailJS
+  initializeEmailJS()
+})
+
+// Also try to initialize EmailJS when window loads (backup)
+window.addEventListener("load", () => {
+  initializeEmailJS()
 })
