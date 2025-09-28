@@ -56,10 +56,12 @@ Você pode explorar todos os meus repositórios no meu perfil do GitHub.
 1. Faça um clone deste repositório  
    ```bash
    git clone https://github.com/LuizHelio-Fim/Portfolio-2.0.git
+   ```
 2. Entre na pasta do Projeto
    ```bash
    cd Portfolio-2.0
-3. Abra o arquivo index.html em seu navegador
+   ```
+3. Abra o arquivo (`index.html`) em seu navegador
    ```bash
    open index.html
-   
+   ```
