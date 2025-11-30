@@ -174,7 +174,6 @@ body {
   gap: 1rem;
 }
 
-/* Adicionado estilos para o botão de idioma */
 .language-toggle {
   background: none;
   border: none;
@@ -687,7 +686,6 @@ body {
     display: block;
   }
 
-  /* Ajustado layout dos botões de ação no mobile */
   .nav-actions {
     gap: 0.5rem;
   }
@@ -716,7 +714,6 @@ body {
     text-align: center;
   }
 
-  /* Ajustada imagem de perfil para mobile */
   .image-placeholder {
     width: 200px;
     height: 200px;
@@ -768,7 +765,6 @@ body {
     font-size: 1rem;
   }
 
-  /* Ajustada imagem de perfil para telas muito pequenas */
   .image-placeholder {
     width: 180px;
     height: 180px;
@@ -779,7 +775,6 @@ body {
     gap: 1.5rem;
   }
 
-  /* Ajustados botões de ação para telas pequenas */
   .nav-actions {
     gap: 0.25rem;
   }

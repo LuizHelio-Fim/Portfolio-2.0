@@ -421,7 +421,6 @@ if (languageToggle) {
   })
 }
 
-// Initialize EmailJS when the library is loaded
 function initializeEmailJS() {
   if (typeof window.emailjs !== "undefined") {
     emailjs = window.emailjs
@@ -432,21 +431,16 @@ function initializeEmailJS() {
   }
 }
 
-// Initialize saved language and theme when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize language
   translatePage(currentLanguage)
 
-  // Initialize theme icon if element exists
   if (themeIcon) {
     updateThemeIcon()
   }
 
-  // Initialize EmailJS
   initializeEmailJS()
 })
 
-// Also try to initialize EmailJS when window loads (backup)
 window.addEventListener("load", () => {
   initializeEmailJS()
 })
